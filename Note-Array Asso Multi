@@ -1,0 +1,53 @@
+Jenis-Jenis Array di PHP
+Array Terindeks:
+
+Setiap item memiliki indeks integer yang dimulai dari 0.
+Contoh: $listMahasiswa = ["Nurul Huda", "Wahid Abdullah", "Renza Ilhami"].
+Array Asosiatif:
+
+Item diidentifikasi oleh kunci (key) bertipe string.
+Contoh: $mahasiswa = ['nama' => 'Nurul Huda', 'domisili' => 'Surabaya', 'jenis_kelamin' => 'Laki-laki'].
+Array Multidimensi:
+
+Array yang memiliki item berupa array lain.
+Contoh: $histogram = [[1, 2, 3, 4, 5], [6, 7, 3, 9, 2], [3, 5, 1, 0, 5], [5, 8, 1, 3, 1]].
+Manipulasi Array
+Menampilkan Array:
+
+Menggunakan indeks atau perulangan.
+Menambahkan Item:
+
+Menggunakan array_push() atau sintaks kurung siku ($array[] = 'nilai').
+Menghapus Item:
+
+Menggunakan array_pop() untuk menghapus item terakhir.
+Menggabungkan Array:
+
+Menggunakan array_merge() atau array unpacking (...).
+Array Unpacking:
+
+Menggabungkan array di tengah array lainnya.
+Konversi Array:
+
+Mengubah array asosiatif ke array terindeks dengan array_values().
+Fungsi Explode dan Implode
+Fungsi Explode:
+
+Membagi string menjadi array berdasarkan delimiter tertentu.
+Contoh: explode(" ", $mahasiswa).
+Fungsi Implode:
+
+Menggabungkan array menjadi string dengan perekat tertentu.
+Contoh: implode(", ", $mahasiswa).
+Pencarian, Filter, dan Pemetaan Array
+Pencarian dengan array_search():
+
+Mencari nilai dalam array dan mengembalikan indeksnya.
+Filter Array dengan array_filter():
+
+Menghasilkan array baru berdasarkan kriteria tertentu.
+Contoh: $nilai30Kebawah = array_filter($nilaiSiswa, function ($item) { return $item['nilai'] <= 30; });
+Pemetaan Array dengan array_map():
+
+Mengaplikasikan fungsi ke setiap elemen array.
+Contoh: $ratusan = array_map(function ($item) { return $item * 100; }, $array);
